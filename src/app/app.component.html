@@ -1,0 +1,12 @@
+<div class="app-content">
+    <ng-container *ngIf="!items else loaded">
+        Loading...
+    </ng-container>
+    <ng-template #loaded>
+        <dx-button 
+            [type]="'danger'"
+            [text]="'Button when items are loaded'">
+        </dx-button>
+        <dx-list [items]="items"></dx-list>
+    </ng-template>
+</div>
